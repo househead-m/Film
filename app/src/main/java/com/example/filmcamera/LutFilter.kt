@@ -17,7 +17,7 @@ class LutFilter(private var lutSize: Float) : GPUImageTwoInputFilter(FRAGMENT_SH
 
     override fun onInit() {
         super.onInit()
-        lutSizeLocation = GLES20.getUniformLocation(program, "lutSize")
+        lutSizeLocation = GLES20.glGetUniformLocation(program, "lutSize")
     }
 
     override fun onInitialized() {
